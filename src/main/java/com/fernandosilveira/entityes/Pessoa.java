@@ -14,20 +14,23 @@ import javax.persistence.Table;
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private Long id;
 		private String nome;
-		private Integer datadenascimento;
+		private String datadenascimento;
 		private Integer cpf;
 		
 		
 		public Pessoa() {
 		}
 
+		
 
-		public Pessoa(Long id, String nome, Integer data, Integer cpf) {;
+		public Pessoa(Long id, String nome, String datadenascimento, Integer cpf) {
+			super();
 			this.id = id;
 			this.nome = nome;
-			this.datadenascimento = data;
+			this.datadenascimento = datadenascimento;
 			this.cpf = cpf;
 		}
+
 
 
 		public Long getId() {
@@ -50,13 +53,13 @@ import javax.persistence.Table;
 		}
 
 
-		public Integer getData() {
+		public String getDatadenascimento() {
 			return datadenascimento;
 		}
 
 
-		public void setData(Integer data) {
-			this.datadenascimento = data;
+		public void setDatadenascimento(String datadenascimento) {
+			this.datadenascimento = datadenascimento;
 		}
 
 
@@ -68,4 +71,9 @@ import javax.persistence.Table;
 		public void setCpf(Integer cpf) {
 			this.cpf = cpf;
 		}
+		
+		
+
+
+	
 	}
